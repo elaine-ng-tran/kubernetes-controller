@@ -8,4 +8,23 @@ layout:
 - go.kubebuilder.io/v4
 projectName: kubernetes-controller
 repo: github.com/elaine-ng-tran/kubernetes-controller
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: example.com
+  group: demo
+  kind: Echo
+  path: github.com/elaine-ng-tran/kubernetes-controller/api/v1
+  version: v1
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: example.com
+  group: demo
+  kind: Greeting
+  path: github.com/elaine-ng-tran/kubernetes-controller/api/v1
+  version: v1
 version: "3"
